@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lms"
+    }
+  },
+  "defaultProject": "lms",
+  "cli": {
+    "analytics": false
+  }
 }

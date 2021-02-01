@@ -1,0 +1,40 @@
+<section>
+<div class="centro"> 
+ <h2>Registrate</h2>
+
+ <form [formGroup]="form" (ngSubmit)="crearUsuario($event)">
+<div>
+    <div>Nombre</div>
+    <input type="text"class="cajas" formControlName="nombre" >
+</div>
+<div>
+    <div>Email</div>
+    <input type="email" class="cajas"  formControlName="email" >
+</div>
+<div>
+    <div>Password</div>
+    <input type="password"class="cajas"  formControlName="password">
+</div>
+<div>
+    <div>Validar Password</div>
+    <input type="password" class="cajas"  formControlName="vpassword">
+</div>
+
+<div *ngIf="compararPassword()" >Las contraseñas no coinciden</div>
+
+<div class="justificar"> 
+    <input type="checkbox"  formControlName="term"> <p>Aceptar los terminos</p>
+</div>
+
+<div *ngIf="form.get('nombre').hasError('required') && form.get('nombre').dirty" > el nombre No esta biem</div>
+
+<div class="botones">
+<button [disabled]="form.invalid" type="submit">Crear Cuenta</button>
+</div>
+
+<div>Ya tienes cuenta <u routerLink="/auth">logeate</u></div>
+</form>
+
+
+</div>   
+</section>

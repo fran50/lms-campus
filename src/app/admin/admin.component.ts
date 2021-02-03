@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../core/servicios/auth/auth.service';
+
 
 @Component({
   selector: 'app-admin',
@@ -8,20 +8,18 @@ import { AuthService } from '../core/servicios/auth/auth.service';
 })
 export class AdminComponent implements OnInit {
 
-  public usuario;
+ 
 
   constructor(
-    private authservice: AuthService
+    
   ) {
 
-     this.usuario = authservice.usuario;
+   
    }
 
   ngOnInit(): void {
   }
 
 
-  cerrarSesion(){
-    this.authservice.logout();
-  }
+
 }

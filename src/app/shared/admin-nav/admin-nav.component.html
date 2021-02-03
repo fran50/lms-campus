@@ -1,7 +1,8 @@
 <nav>
-    <div>
-        <p>Nombre</p>
-        <img src="asset/img/5.jpg">
+    <div class="usuario">
+        <p>{{usuario.nombre}}</p>
+        <img [src]="usuario.devuelveImagen">
+        <div (click)="cerrarSesion()">Cerrar Sesion</div>
     </div>
 </nav>
 

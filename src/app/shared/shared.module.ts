@@ -11,6 +11,7 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
   ],
   exports:[
     AdminNavComponent
+    
   ]
 })
 export class SharedModule { 
